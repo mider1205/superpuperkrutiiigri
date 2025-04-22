@@ -70,4 +70,3 @@ class Casino:
 cheburekmoney = Casino()
 misha = Player()
 cheburekmoney.game(misha)
-print(":--")

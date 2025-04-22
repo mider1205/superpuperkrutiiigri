@@ -29,43 +29,7 @@ class Player:
         return [t, r, k]
 
 
-class Casino:
-    def __init__(self):
-        self.win = 0
-        self.lose = 0
 
-    def game(self, obj:Player):
-        while obj.balance > 0:
-            m = obj.bet()
-            dice = random.randint(1, 6)
-            print(f"Выпало {dice}")
-            if m[0] == 1:
-                if dice > m[1]:
-                    obj.balance += m[2] * 2
-                    obj.win += 1
-                    self.lose += 1
-                else:
-                    obj.lose += 1
-                    self.win += 1
-            elif m[0] == 2:
-                if dice < m[1]:
-                    obj.balance += m[2] * 2
-                    obj.win += 1
-                    self.lose += 1
-                else:
-                    obj.lose += 1
-                    self.win += 1
-            elif m[0] == 3:
-                if dice == m[1]:
-                    obj.balance += m[2] * 54
-                    obj.win += 1
-                    self.lose += 1
-                else:
-                    obj.lose += 1
-                    self.win += 1
-            print(f"Статистика казино:W {self.win} ,L {self.lose}")
-            print(f"Статистика игрока:W {obj.win} ,L {obj.lose} ,На счету: {obj.balance}")
-        print("Всего доброго, приходите ещё!")
 
 cheburekmoney = Casino()
 misha = Player()

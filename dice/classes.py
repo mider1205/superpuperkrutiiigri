@@ -1,6 +1,6 @@
 import random
 
-
+kakoi-to yrodski klass
 
 
 
